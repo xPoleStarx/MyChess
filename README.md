@@ -31,32 +31,5 @@ The chessboard is represented in the command-line interface as a grid of squares
 
 For Black pieces, the symbols are represented in lowercase.
 
-Example Execution
-🔴 It's White's turn.
-🔄 Enter the location of the piece: e2
-🔄 Enter the new location of the piece: e4
-
-   A    B    C    D    E    F    G    H
-   ______________________________________
-8| ♜ | ♞ | ♝ | ♛ | ♚ | ♝ | ♞ | ♜  |
-   ______________________________________
-7| ♟ | ♟ | ♟ | ♟ | ♟ | ♟ | ♟ | ♟  |
-   ______________________________________
-6|    |    |    |    |    |    |    |    |
-   ______________________________________
-5|    |    |    |    | ♙ |    |    |    |
-   ______________________________________
-4|    |    |    |    | ♟ |    |    |    |
-   ______________________________________
-3|    |    |    |    |    |    |    |    |
-   ______________________________________
-2| ♙ | ♙ | ♙ | ♙ |    | ♙ | ♙ | ♙ |
-   ______________________________________
-1| ♖ | ♘ | ♗ | ♕ | ♔ | ♗ | ♘ | ♖ |
-   ______________________________________
-    A    B    C    D    E    F    G    H
-    
-    In this example, White moves their pawn from e2 to e4.
-
 ⚠️ Please note that the provided example execution is simplified, and you are responsible for
 implementing the missing classes and game logic based on the provided requirements.
