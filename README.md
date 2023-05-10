@@ -39,7 +39,7 @@ For Black pieces, the symbols are represented in lowercase.
 🔄 Enter the location of the piece: e2
 🔄 Enter the new location of the piece: e4
 
-       A    B    C    D    E    F    G    H
+   A    B    C    D    E    F    G    H
    ___________________________________
 8| ♜ | ♞ | ♝ | ♛ | ♚ | ♝ | ♞ | ♜ |
    ___________________________________
@@ -57,7 +57,7 @@ For Black pieces, the symbols are represented in lowercase.
    ___________________________________
 1| ♖ | ♘ | ♗ | ♕ | ♔ | ♗ | ♘ | ♖ |
    ___________________________________
-     A    B    C    D    E    F    G    H
+   A    B    C    D    E    F    G    H
 ```
 
 In this example, White moves their pawn from e2 to e4.
