@@ -5,7 +5,7 @@ public class Queen extends Piece {
     }
 
     @Override
-    public boolean isValidMove(int sourceX, int sourceY, int destX, int destY) {
+    public boolean isValidMove(int sourceX, int sourceY, int destX, int destY, Square[][] board) {
         int dx = Math.abs(destX - sourceX);
         int dy = Math.abs(destY - sourceY);
         return dx == 0 || dy == 0 || dx == dy;

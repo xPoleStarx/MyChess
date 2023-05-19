@@ -5,7 +5,7 @@ public class Rook extends Piece {
     }
 
     @Override
-    public boolean isValidMove(int sourceX, int sourceY, int destX, int destY) {
+    public boolean isValidMove(int sourceX, int sourceY, int destX, int destY, Square[][] board) {
         return sourceX == destX || sourceY == destY;
     }
 }

@@ -5,7 +5,7 @@ public class Pawn extends Piece {
     }
 
     @Override
-    public boolean isValidMove(int sourceX, int sourceY, int destX, int destY) {
+    public boolean isValidMove(int sourceX, int sourceY, int destX, int destY, Square[][] board) {
         int dx = Math.abs(destX - sourceX);
         int dy = destY - sourceY;
 
@@ -13,21 +13,21 @@ public class Pawn extends Piece {
         if (isWhite) {
             if (dx == 0 && dy == -1) {
                 return true; // Regular move
-            } else if (dx == 0 && dy == -2 && sourceY == 1) {
-                return true; // Initial double move
-            } else if (dx == 1 && dy == -1) {
-                return true; // Capture move
+            } else if (dx == 0 && dy == -2 && sourceY == 6) {
+                return true; // Double move from the initial position
+            } else if (dx == 1 && dy == -1 && board[destY][destX].hasPiece() && !board[destY][destX].getPiece().isWhite()) {
+                return true; // Capture diagonally
             }
         } else {
             if (dx == 0 && dy == 1) {
                 return true; // Regular move
-            } else if (dx == 0 && dy == 2 && sourceY == 6) {
-                return true; // Initial double move
-            } else if (dx == 1 && dy == 1) {
-                return true; // Capture move
+            } else if (dx == 0 && dy == 2 && sourceY == 1) {
+                return true; // Double move from the initial position
+            } else if (dx == 1 && dy == 1 && board[destY][destX].hasPiece() && board[destY][destX].getPiece().isWhite()) {
+                return true; // Capture diagonally
             }
         }
 
-        return false; // Invalid move
+        return false;
     }
 }

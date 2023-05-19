@@ -1,17 +1,17 @@
 public class Move {
-    private String source;
-    private String destination;
+    private Square sourceSquare;
+    private Square destSquare;
 
-    public Move(String source, String destination) {
-        this.source = source;
-        this.destination = destination;
+    public Move(Square sourceSquare, Square destSquare) {
+        this.sourceSquare = sourceSquare;
+        this.destSquare = destSquare;
     }
 
-    public String getSource() {
-        return source;
+    public Square getSourceSquare() {
+        return sourceSquare;
     }
 
-    public String getDestination() {
-        return destination;
+    public Square getDestSquare() {
+        return destSquare;
     }
 }

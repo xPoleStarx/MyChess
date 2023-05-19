@@ -14,5 +14,5 @@ public abstract class Piece {
         return symbol;
     }
 
-    public abstract boolean isValidMove(int sourceX, int sourceY, int destX, int destY);
+    public abstract boolean isValidMove(int sourceX, int sourceY, int destX, int destY, Square[][] board);
 }

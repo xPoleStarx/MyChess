@@ -59,20 +59,40 @@ public class Chessboard {
             Piece piece = sourceSquare.getPiece();
 
             // Check if the move is valid for the selected piece
-            if (piece.isValidMove(sourceX, sourceY, destX, destY)) {
-                // Check if the destination square is empty or has an opponent's piece
-                if (!destSquare.hasPiece() || destSquare.getPiece().isWhite() != whiteTurn) {
-                    destSquare.setPiece(piece);
-                    sourceSquare.setPiece(null);
-                    whiteTurn = !whiteTurn; // Switch turn
-                    checkGameEnd(); // Check if game is over
+            if (piece.isValidMove(sourceX, sourceY, destX, destY, board)) {
+                // Check if the path is clear
+                if (isPathClear(sourceX, sourceY, destX, destY)) {
+                    // Check if the destination square is empty or has an opponent's piece
+                    if (!destSquare.hasPiece() || destSquare.getPiece().isWhite() != whiteTurn) {
+                        destSquare.setPiece(piece);
+                        sourceSquare.setPiece(null);
+                        whiteTurn = !whiteTurn; // Switch turn
+                        checkGameEnd(); // Check if game is over
 
-                    return true;
+                        return true;
+                    }
                 }
             }
         }
 
         return false; // Invalid move
+    }
+
+    private boolean isPathClear(int sourceX, int sourceY, int destX, int destY) {
+        int dx = Integer.compare(destX, sourceX);
+        int dy = Integer.compare(destY, sourceY);
+        int x = sourceX + dx;
+        int y = sourceY + dy;
+
+        while (x != destX || y != destY) {
+            if (board[y][x].hasPiece()) {
+                return false;
+            }
+            x += dx;
+            y += dy;
+        }
+
+        return true;
     }
 
     private void checkGameEnd() {
